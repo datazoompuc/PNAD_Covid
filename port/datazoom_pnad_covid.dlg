@@ -7,10 +7,10 @@ POSITION . . 420 300
 DIALOG main, label("PNAD COVID19") tabtitle("Main")
 BEGIN
 ******************************************************************************   
-GROUPBOX caixaAnos 20 20 190 220, label("Semana(s)")
+GROUPBOX caixaAnos 20 20 190 220, label("Mês")
 
-   CHECKBOX    ck0501 +14 +20 210  ., label("Maio/2020 - Semana 1")  option(0501)
-   CHECKBOX    ck0502 @ +24 210    ., label("Maio/2020 - Semana 2")  option(0502)
+   CHECKBOX    ck05 +14 +20 210  ., label("Maio/2020")  option(05)
+   CHECKBOX    ck06 @ +24 210    ., label("Junho/2020")  option(06)
    
 GROUPBOX caixaDicionários 210 20 190 220, label("Bases de Dados")
 
@@ -61,8 +61,8 @@ PROGRAM command
 		put "datazoom_pnad_covid"
 		beginoptions
 			/*Parte da syntax: semanas a extrair*/
-			put "weeks("
-			option main.ck0501 main.ck0502
+			put "months("
+			option main.ck05 main.ck06
 			put ") "
 			/*Parte da syntax: base de dados originais*/
 			put saidadata " "
