@@ -26,8 +26,8 @@ else {
 loc caminhoprin = c(pwd)
 
 /* Dicionário */
-findfile pnad_covid.dct
-loc dic = r(fn)
+*findfile pnad_covid.dct
+*loc dic = r(fn)
 
 /* Extração dos arquivos */
 
