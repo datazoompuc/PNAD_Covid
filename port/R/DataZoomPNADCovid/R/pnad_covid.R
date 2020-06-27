@@ -15,18 +15,18 @@ NULL
 #' Carregando microdados da PNAD COVID19
 #'
 #' Extrai e constrÃ³i bases de dados da PNAD COVID19 em formato R (.RData) a partir
-#' dos microdados originais, os quais  não são disponibilizados pelo Portal do IBGE
-#' (para informações sobre como obter os arquivos originais de dados,
+#' dos microdados originais, os quais  nÃ£o sÃ£o disponibilizados pelo Portal do IBGE
+#' (para informa??es sobre como obter os arquivos originais de dados,
 #' consulte o site do IBGE (www.ibge.gov.br).
-#' Como a pesquisa ainda é publicada pelo IBGE, este programa está em constante atualização.
-#'  A função gera uma base para cada mês. Se for o caso, utilize o
+#' Como a pesquisa ainda Ã© publicada pelo IBGE, este programa estÃ¡ em constante atualizaÃ§Ã£o.
+#'  A funÃ§Ã£o gera uma base para cada mÃªs. Se for o caso, utilize o
 #'  comando  \code{\link{bind_rows}} para empilhar as bases.
 #'
-#' @param diretorio_dados Diretório onde os microdados originais em formato de texto estão armazenados
+#' @param diretorio_dados DiretÃ³rio onde os microdados originais em formato de texto estÃ£o armazenados
 #'
-#' @param ... vetores com datas das pesquisas de interesse no  formato \code{c('mês', 'ano')}
+#' @param ... vetores com datas das pesquisas de interesse no  formato \code{c('m?s', 'ano')}
 #'
-#' @return Lista de dataframes, sendo cada entrada um mês/ano em \code{...}
+#' @return Lista de dataframes, sendo cada entrada um m?s/ano em \code{...}
 #' @encoding UTF-8
 #' @export
 #'
@@ -39,11 +39,11 @@ pnad_covid_microdados <- function(diretorio_dados,
 
   datas <- list(...)
 
-  if (any(map(datas, length) != 2)) {stop('Escolha o mesmo Número de anos e meses', call. = FALSE)}
+  if (any(map(datas, length) != 2)) {stop('Escolha o mesmo N?mero de anos e meses', call. = FALSE)}
   mes <- datas %>% map( ~ .x[[1]])
   ano <- datas %>% map( ~ .x[[2]])
 
-  if (sum(mes %in% 5:12 == F) > 0) {stop('A PNAD-COVID começa em maio de 2020', call. = FALSE)}
+  if (sum(mes %in% 5:12 == F) > 0) {stop('A PNAD-COVID come?a em maio de 2020', call. = FALSE)}
   if (sum(ano != 2020) > 0) {stop('A PNAD-COVID considera o ano de 2020', call. = FALSE)}
 
 mes <- mes %>% map(~.x %>% str_pad(width = 2, pad = 0))
@@ -291,88 +291,88 @@ data.frame(
     "F006"
   ),
   descricao = c(
-    "Ano de referência",
-    "Unidade da Federação",
+    "Ano de refer?ncia",
+    "Unidade da Federa??o",
     "Capital",
-    "Região Metropolitana e Região Administrativa Integrada de Desenvolvimento",
-    "Número de seleção do domicílio",
-    "Semana no mês",
-    "Mês da pesquisa",
-    "Número da entrevista no domicílio",
+    "Regi?o Metropolitana e Regi?o Administrativa Integrada de Desenvolvimento",
+    "N?mero de sele??o do domic?lio",
+    "Semana no m?s",
+    "M?s da pesquisa",
+    "N?mero da entrevista no domic?lio",
     "Estrato",
     "UPA",
-    "Situação do domicílio",
-    "Tipo de área",
-    "Projeção da população",
-    "Peso do domicílio e das pessoas - sem pós estratificação",
-    "Peso do domicílio e das pessoas - com pós estratificação",
-    "Domínios de projeção",
-    "Número de ordem",
-    "Condição no domicílio",
+    "Situa??o do domic?lio",
+    "Tipo de ?rea",
+    "Proje??o da popula??o",
+    "Peso do domic?lio e das pessoas - sem p?s estratifica??o",
+    "Peso do domic?lio e das pessoas - com p?s estratifica??o",
+    "Dom?nios de proje??o",
+    "N?mero de ordem",
+    "Condi??o no domic?lio",
     "Dia de nascimento",
-    "Mês de nascimento",
+    "M?s de nascimento",
     "Ano de nascimento",
     "Idade do morador",
     "Sexo",
-    "Cor ou raça",
+    "Cor ou ra?a",
     "Escolaridade",
-    "Nos últimos sete dias teve febre?",
-    "Nos últimos sete dias teve tosse?",
-    "Nos últimos sete dias teve dor de garganta?",
-    "Nos últimos sete dias teve dificuldade para respirar?",
-    "Nos últimos sete dias teve dor de cabeça?",
-    "Nos últimos sete dias teve dor no peito?",
-    "Nos últimos sete dias teve náusea?",
-    "Nos últimos sete dias teve nariz entupido ou escorrendo?",
-    "Nos últimos sete dias teve fadiga?",
-    "Nos últimos sete dias teve dor nos olhos?",
-    "Nos últimos sete dias teve perda de cheiro ou sabor?",
-    "Nos últimos sete dias teve dor muscular?",
-    "Por causa disso, foi a algum estabelecimento de saúde?",
-    "Providência tomada para recuperar dos sintomas foi ficar em casa",
-    "Providência tomada para recuperar dos sintomas foi ligar para algum
-    profissional de saúde",
-    "Providência tomada  para recuperar dos sintomas foi comprar e/ou tomar
-    remédio por conta prÃ³pria",
-    "Providência tomada para recuperar dos sintomas foi comprar
-                              e/ou tomar remédio por orientação médica",
-    "Providência tomada para recuperar dos sintomas foi
-                              receber visita de algum profissional de saúde do
-    SUS (equipe de saúde da família, agente comunitário, etc.)",
-    "Providência tomada para recuperar dos sintomas foi receber
-                              visita de profissional de saúde particular",
-    "Providência tomada para recuperar dos sintomas foi outra",
-    "Local que buscou atendimento foi posto de saúde/Unidade básica de
-    saúde /Equipe de saúde da Família (médico, enfermeiro, técnico de enfermagem
-    ou agente comunitário de saúde)",
+    "Nos ?ltimos sete dias teve febre?",
+    "Nos ?ltimos sete dias teve tosse?",
+    "Nos ?ltimos sete dias teve dor de garganta?",
+    "Nos ?ltimos sete dias teve dificuldade para respirar?",
+    "Nos ?ltimos sete dias teve dor de cabe?a?",
+    "Nos ?ltimos sete dias teve dor no peito?",
+    "Nos ?ltimos sete dias teve n?usea?",
+    "Nos ?ltimos sete dias teve nariz entupido ou escorrendo?",
+    "Nos ?ltimos sete dias teve fadiga?",
+    "Nos ?ltimos sete dias teve dor nos olhos?",
+    "Nos ?ltimos sete dias teve perda de cheiro ou sabor?",
+    "Nos ?ltimos sete dias teve dor muscular?",
+    "Por causa disso, foi a algum estabelecimento de sa?de?",
+    "Provid?ncia tomada para recuperar dos sintomas foi ficar em casa",
+    "Provid?ncia tomada para recuperar dos sintomas foi ligar para algum
+    profissional de sa?de",
+    "Provid?ncia tomada  para recuperar dos sintomas foi comprar e/ou tomar
+    rem?dio por conta prÃ³pria",
+    "Provid?ncia tomada para recuperar dos sintomas foi comprar
+                              e/ou tomar rem?dio por orienta??o m?dica",
+    "Provid?ncia tomada para recuperar dos sintomas foi
+                              receber visita de algum profissional de sa?de do
+    SUS (equipe de sa?de da fam?lia, agente comunit?rio, etc.)",
+    "Provid?ncia tomada para recuperar dos sintomas foi receber
+                              visita de profissional de sa?de particular",
+    "Provid?ncia tomada para recuperar dos sintomas foi outra",
+    "Local que buscou atendimento foi posto de sa?de/Unidade b?sica de
+    sa?de /Equipe de sa?de da Fam?lia (m?dico, enfermeiro, t?cnico de enfermagem
+    ou agente comunit?rio de sa?de)",
     "Local que buscou atendimento foi pronto socorro do SUS/UPA",
     "Local que buscou atendimento foi hospital do SUS",
-    "Local que buscou atendimento foi ambulatório ou consultório privado ou
-    ligado às forças armadas",
-    "Local que buscou atendimento foi pronto socorro privado ou ligado às
-    forças armadas",
-    "Local que buscou atendimento foi hospital privado ou ligado às forças armadas",
+    "Local que buscou atendimento foi ambulat?rio ou consult?rio privado ou
+    ligado ?s for?as armadas",
+    "Local que buscou atendimento foi pronto socorro privado ou ligado ?s
+    for?as armadas",
+    "Local que buscou atendimento foi hospital privado ou ligado ?s for?as armadas",
     "Ao procurar o hospital, teve que ficar internado por um dia ou mais",
-    "Durante a internação, foisedado, entubado e colocado em
-    respiração artificial com ventilador",
-    "Tem algum plano de saúde médico, seja particular,
-    de empresa ou de órgão público",
+    "Durante a interna??o, foisedado, entubado e colocado em
+    respira??o artificial com ventilador",
+    "Tem algum plano de sa?de m?dico, seja particular,
+    de empresa ou de ?rg?o p?blico",
     "Na semana passada, por pelo menos uma hora, trabalhou ou fez algum bico?",
     "Na semana passada, estava temporariamente afastado de algum trabalho?",
-    "Qual o principal motivo deste afastamento temporário?",
+    "Qual o principal motivo deste afastamento tempor?rio?",
     "Continuou a ser remunerado (mesmo que parcialmente) por esse trabalho",
-    "Há quanto tempo está afastado desse trabalho?",
-    "Tempo que estava afastado (De 1 mês a menos de 1 ano)",
+    "H? quanto tempo est? afastado desse trabalho?",
+    "Tempo que estava afastado (De 1 m?s a menos de 1 ano)",
     "Tempo que estava afastado (De 1 ano a menos de 2 anos)",
     "Tempo que estava afastado (de 02 anos a 98 anos)",
     "Tem mais de um trabalho",
-    "No trabalho (técnico ou principal) que tinha nessa semana, era:",
-    "Esse trabalho era na área:",
-    "Tem carteria de trabalho assinada ou é funcionário público estatutário?",
-    "Que tipo de trabalho, cargo ou função você realiza no seu trabalho (técnico
+    "No trabalho (t?cnico ou principal) que tinha nessa semana, era:",
+    "Esse trabalho era na ?rea:",
+    "Tem carteria de trabalho assinada ou ? funcion?rio p?blico estatut?rio?",
+    "Que tipo de trabalho, cargo ou fun??o voc? realiza no seu trabalho (t?cnico
     ou principal)?",
-    "Qual é a principal atividade do local ou empresa em que você trabalha?",
-    "Na semana passada, quantos empregados trabalhavam nesse negócio/empresa
+    "Qual ? a principal atividade do local ou empresa em que voc? trabalha?",
+    "Na semana passada, quantos empregados trabalhavam nesse neg?cio/empresa
     que ... tinha ?",
     "1 a 5 empregados",
     "6 a 10 empregados",
@@ -380,52 +380,52 @@ data.frame(
     "Quantas horas, na semana passada, de fato trabalhou?",
     "Quanto recebia (ou retirava) normalmente em todos os seus trabalhos",
     "Recebia/retirava normalmente em dinheiro",
-    "Número da faixa do rendimento/retirada em dinheiro",
+    "N?mero da faixa do rendimento/retirada em dinheiro",
     "Valor em dinheiro",
     "Recebia normalmente em produtos e mercadorias",
-    "Número da faixa do rendimento/retirada em produtos e mercadorias",
+    "N?mero da faixa do rendimento/retirada em produtos e mercadorias",
     "Valor em produtos e mercadorias",
-    "Recebia normalmente somente em benefícios",
-    "Era não remunerado",
+    "Recebia normalmente somente em benef?cios",
+    "Era n?o remunerado",
     "Quanto recebia (ou retirava) normalmente em todos os seus trabalhos",
     "Recebia/retirava normalmente em dinheiro",
-    "Número da faixa do rendimento/retirada em dinheiro",
+    "N?mero da faixa do rendimento/retirada em dinheiro",
     "Valor em dinheiro",
     "Recebia normalmente em produtos e mercadorias",
-    "Número da faixa do rendimento/retirada em produtos e mercadorias",
+    "N?mero da faixa do rendimento/retirada em produtos e mercadorias",
     "Valor em produtos e mercadorias",
     "Na maior parte do tempo, na semana passada,
-                              esse trabalho (técnico ou principal) foi exercido
+                              esse trabalho (t?cnico ou principal) foi exercido
     no mesmo local em que costuma trabalhar?",
     "Na semana passada, o(a) Sr(a) estava em trabalho remoto
     (home office ou teletrabalho)?",
     "O(A) Sr(a) contribui para o INSS?",
-    "Na semana passada ___ tomou alguma providência
+    "Na semana passada ___ tomou alguma provid?ncia
     efetiva para conseguir trabalho?",
-    "Qual o principal motivo de não ter procurado trabalho na semana passada?",
-    "Embora você não tenha procurado trabalho, gostaria de ter trabalhado na semana passada?",
-    "Rendimento recebido de aposentadoria epensão por todos os moradores",
-    "Somatório dos valores recebidos",
-    "Rendimento depensão alimentícia, doação ou mesada em dinheiro de pessoa
-    que não morava no domicílio",
-    "Somatório dos valores recebidos",
-    "Rendimentos de Programa Bolsa Família",
-    "Somatório dos valores recebidos",
-    "No mês de ... (mês de referência), ... recebeu rendimentos de Benefício
-    Assistencial de Prestação Continuada - BPC-LOAS?",
-    "Somatório dos valores recebidos",
-    "Auxilios emergenciais relacionados ao coronavírus",
-    "Somatório dos valores recebidos",
+    "Qual o principal motivo de n?o ter procurado trabalho na semana passada?",
+    "Embora voc? n?o tenha procurado trabalho, gostaria de ter trabalhado na semana passada?",
+    "Rendimento recebido de aposentadoria epens?o por todos os moradores",
+    "Somat?rio dos valores recebidos",
+    "Rendimento depens?o aliment?cia, doa??o ou mesada em dinheiro de pessoa
+    que n?o morava no domic?lio",
+    "Somat?rio dos valores recebidos",
+    "Rendimentos de Programa Bolsa Fam?lia",
+    "Somat?rio dos valores recebidos",
+    "No m?s de ... (m?s de refer?ncia), ... recebeu rendimentos de Benef?cio
+    Assistencial de Presta??o Continuada - BPC-LOAS?",
+    "Somat?rio dos valores recebidos",
+    "Auxilios emergenciais relacionados ao coronav?rus",
+    "Somat?rio dos valores recebidos",
     "Seguro desemprego",
-    "Somatório dos valores recebidos",
-    "Outros rendimentos, como aluguel, arrendamento, previdência privada,
-    bolsa de estudos, rendimentos de aplicação financeira etc.",
-    "Somatório dos valores recebidos",
-    "Este domicílio é:",
-    "Qual foi o valor mensal do aluguel pago, ou que deveria ter sido pago, no mês de referência?",
-    "Número da faixa do aluguel pago",
-    "Quem respondeu ao questionário?",
-    "Número de ordem do morador que prestou as informações"
+    "Somat?rio dos valores recebidos",
+    "Outros rendimentos, como aluguel, arrendamento, previd?ncia privada,
+    bolsa de estudos, rendimentos de aplica??o financeira etc.",
+    "Somat?rio dos valores recebidos",
+    "Este domic?lio ?:",
+    "Qual foi o valor mensal do aluguel pago, ou que deveria ter sido pago, no m?s de refer?ncia?",
+    "N?mero da faixa do aluguel pago",
+    "Quem respondeu ao question?rio?",
+    "N?mero de ordem do morador que prestou as informa??es"
   )
 )
 

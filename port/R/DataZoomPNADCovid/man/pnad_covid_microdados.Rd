@@ -10,15 +10,15 @@ pnad_covid_microdados(diretorio_dados, ...)
 \arguments{
 \item{diretorio_dados}{Diretório onde os microdados originais em formato de texto estão armazenados}
 
-\item{...}{vetores com datas das pesquisas de interesse no  formato \code{c('mês', 'ano')}}
+\item{...}{vetores com datas das pesquisas de interesse no  formato \code{c('m?s', 'ano')}}
 }
 \value{
-Lista de dataframes, sendo cada entrada um mês/ano em \code{...}
+Lista de dataframes, sendo cada entrada um m?s/ano em \code{...}
 }
 \description{
 Extrai e constrói bases de dados da PNAD COVID19 em formato R (.RData) a partir
 dos microdados originais, os quais  não são disponibilizados pelo Portal do IBGE
-(para informações sobre como obter os arquivos originais de dados,
+(para informa??es sobre como obter os arquivos originais de dados,
 consulte o site do IBGE (www.ibge.gov.br).
 Como a pesquisa ainda é publicada pelo IBGE, este programa está em constante atualização.
 A função gera uma base para cada mês. Se for o caso, utilize o
