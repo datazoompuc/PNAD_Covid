@@ -18,7 +18,7 @@ GROUPBOX caixaDicionários 210 20 190 220, label("Data Base")
 	BUTTON	flsalvando  @ +35 100 ., label("Saving...") onpush(script salvando) 
 
 	
-TEXT     credit     5   250 200    ., label("PUC-Rio - Department of Economics"") left
+TEXT     credit     5   250 200    ., label("PUC-Rio - Department of Economics") left
 TEXT     notes     5   270 360    ., label("Note: regularly reinstall the package datazoom_pnad_covid") left
 
 
