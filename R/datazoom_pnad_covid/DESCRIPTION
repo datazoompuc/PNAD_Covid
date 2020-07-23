@@ -1,4 +1,4 @@
-Package: datazoom_pnad_covid
+Package: datazoomPNADcovid
 Title: Acesso aos microdados da PNAD COVID19 em formato .R
 Version: 1.0
 Authors@R: 
