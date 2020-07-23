@@ -14,7 +14,7 @@ devtools::install_github('datazoompuc/PNAD_Covid/port/R/datazoom_pnad_covid')
 Uma vez instalado, carregue o pacote:
 
 ```
-library(datazoom_pnad_covid)
+library(datazoomPNADcovid)
 ```
 Para carregar os dados de maio de 2015:
 
