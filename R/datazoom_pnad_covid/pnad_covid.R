@@ -5,7 +5,7 @@
 #' @importFrom stringr str_pad
 
 NULL
-
+devtools::document()
 
 
 
