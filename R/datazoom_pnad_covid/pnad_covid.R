@@ -28,10 +28,10 @@ devtools::document()
 #'
 #' @return Lista de dataframes, sendo cada entrada um mês/ano em \code{...}
 #' @encoding UTF-8
-#' @export
 #'
 #' @examples
-#' datazoom_pnadc("./Desktop", c(5, 2020))
+#' pnad_covid_microdados("./Desktop", c(5, 2020))
+#' @export
 pnad_covid_microdados <- function(diretorio_dados,
                                   ...) {
   datas <- list(...)
