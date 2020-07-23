@@ -1,4 +1,4 @@
-# DataZoomPNADCovid
+# datazoom_pnad_covid
 O Data Zoom permite a leitura dos microdados por meio do programa R para todas os meses da PNAD COVID a partir de Maio de 2020, gerando bases de dados no formato do programa. 
 Todas as variáveis originais possuem os nomes sugeridos pelo IBGE em seu dicionário. Para utilizar o pacote, o usuário deve obter os microdados referentes as semanas 
 dos meses de interesse no site do [IBGE](https://www.ibge.gov.br/).
@@ -9,12 +9,12 @@ Uma vez baixados e descompactados os microdados, instale, se necessário, o paco
 
 ```
 if(!require(devtools)) install.packages("devtools")
-devtools::install_github('datazoompuc/PNAD_Covid/port/R/DataZoomPNADCovid')
+devtools::install_github('datazoompuc/PNAD_Covid/port/R/datazoom_pnad_covid')
 ```
 Uma vez instalado, carregue o pacote:
 
 ```
-library(DataZoomPNADCovid)
+library(datazoom_pnad_covid)
 ```
 Para carregar os dados de maio de 2015:
 
