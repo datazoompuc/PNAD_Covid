@@ -9,7 +9,7 @@ Uma vez baixados e descompactados os microdados, instale, se necessário, o paco
 
 ```
 if(!require(devtools)) install.packages("devtools")
-devtools::install_github('datazoompuc/PNAD_Covid/port/R/datazoom_pnad_covid')
+devtools::install_github('datazoompuc/PNAD_Covid/R/datazoom_pnad_covid')
 ```
 Uma vez instalado, carregue o pacote:
 
