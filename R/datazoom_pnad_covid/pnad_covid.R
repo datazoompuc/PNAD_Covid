@@ -4,10 +4,8 @@
 #' @importFrom readr cols read_csv col_double col_integer
 #' @importFrom stringr str_pad
 
+
 NULL
-devtools::document()
-
-
 
 
 
