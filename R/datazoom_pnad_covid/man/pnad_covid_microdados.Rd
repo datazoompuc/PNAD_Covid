@@ -21,9 +21,10 @@ dos microdados originais, os quais  não são disponibilizados pelo Portal do IB
 (para informações sobre como obter os arquivos originais de dados,
 consulte o site do IBGE (www.ibge.gov.br).
 Como a pesquisa ainda é publicada pelo IBGE, este programa está em constante atualização.
- A função gera uma base para cada mês. Se for o caso, utilize o
- comando  \code{\link{bind_rows}} para empilhar as bases.
+A função gera uma base para cada mês. Se for o caso, utilize o
+comando  \code{\link{bind_rows}} para empilhar as bases.
 }
 \examples{
-pnad_covid_microdados("./Desktop", c(5, 2020))
+datazoom_pnadc('./Desktop', c(5, 2020))
+
 }
