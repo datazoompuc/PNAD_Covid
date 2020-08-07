@@ -184,9 +184,7 @@ map( ~ .x %>%
 
 ### Definindo labels, em português ou inglês
 
-Descricoes <-
-#####
-data.frame(
+Descricoes <- data.frame(
   Codigo_da_variavel = c(
     "Ano",
     "UF",
@@ -441,160 +439,165 @@ data.frame(
     "Quem respondeu ao questionário?",
     "Número de ordem do morador que prestou as informações"
   ),
-  descricao_eng = c("Year",
-                    "State",
-                    "Capital",
-                    "Metropolitan Region",
-                    "Household selection number",
-                    "Week of the month",
-                    "Month of the survey",
-                    "Household interview number",
-                    "Stratum",
-                    "District borders",
-                    "Type of situation in the household",
-                    "Area type",
-                    "Population projection",
-                    "Weight",
-                    "Weight",
-                    "Projecting domain",
-                    "Order number",
-                    "Household condition",
-                    "Day of birth",
-                    "Month of birth",
-                    "Year of birth",
-                    "Resident's age",
-                    "Gender",
-                    "Skin color or race",
-                    "Schooling",
-                    "In the last week did you have fever?",
-                    "In the last week did you have cough?",
-                    "In the last week did you have sore throat?",
-                    "In the last week did you have difficulty breathing?",
-                    "In the last week did you have headache?",
-                    "In the last week did you have chest pain?",
-                    "In the last week did you have nausea?",
-                    "In the last week did you have stuffy or runny nose?",
-                    "In the last week did you have fatigue?",
-                    "In the last week did you have eye pain?",
-                    "In the last week did you have loss of smell or taste?",
-                    "In the last week did you have muscle pain?",
-                    "Because of that, did you go to any health establishment?",
-                    "Providence taken to recover from symptoms was staying at home",
-                    "Providence taken to recover from symptoms was to call some
+  descricao_eng = c(
+    "Year",
+    "State",
+    "Capital",
+    "Metropolitan Region",
+    "Household selection number",
+    "Week of the month",
+    "Month of the survey",
+    "Household interview number",
+    "Stratum",
+    "District borders",
+    "Type of situation in the household",
+    "Area type",
+    "Population projection",
+    "Weight",
+    "Weight",
+    "Projecting domain",
+    "Order number",
+    "Household condition",
+    "Day of birth",
+    "Month of birth",
+    "Year of birth",
+    "Resident's age",
+    "Gender",
+    "Skin color or race",
+    "Schooling",
+    "In the last week did you have fever?",
+    "In the last week did you have cough?",
+    "In the last week did you have sore throat?",
+    "In the last week did you have difficulty breathing?",
+    "In the last week did you have headache?",
+    "In the last week did you have chest pain?",
+    "In the last week did you have nausea?",
+    "In the last week did you have stuffy or runny nose?",
+    "In the last week did you have fatigue?",
+    "In the last week did you have eye pain?",
+    "In the last week did you have loss of smell or taste?",
+    "In the last week did you have muscle pain?",
+    "Because of that, did you go to any health establishment?",
+    "Providence taken to recover from symptoms was staying at home",
+    "Providence taken to recover from symptoms was to call some
      healthcare professional",
-                    "Providence taken to recover from symptoms was to buy and/or
+    "Providence taken to recover from symptoms was to buy and/or
                     take medicine on their own",
-                    "Providence taken to recover from symptoms was to buy and/or
+    "Providence taken to recover from symptoms was to buy and/or
                     take medicine by medical advice",
-                    "Providence taken to recover from symptoms was a visit from
+    "Providence taken to recover from symptoms was a visit from
                     some public healthcare professional",
-                    "Providence taken to recover from symptoms was a visit from
+    "Providence taken to recover from symptoms was a visit from
                     some private healthcare professional",
-                    "Providence taken to recover from symptoms was another",
-                    "The place where you sought care was a health post/basic
+    "Providence taken to recover from symptoms was another",
+    "The place where you sought care was a health post/basic
                     health unit/
                     Family Health Team (doctor, nurse, nursing technician or
     community health worker)",
-                    "The place where you sought care was the SUS/UPA emergency room",
-                    "The place where you sought care was a SUS hospital",
-                    "The place where you sought care was an outpatient or
+    "The place where you sought care was the SUS/UPA emergency room",
+    "The place where you sought care was a SUS hospital",
+    "The place where you sought care was an outpatient or
                     private practice  or linked to the armed forces",
-                    "Place that sought care was a private emergency room or
+    "Place that sought care was a private emergency room or
                     linked to the armed forces",
-                    "Place where he sought care was a private hospital or linked
+    "Place where he sought care was a private hospital or linked
                     to the armed forces",
-                    "When looking for the hospital, had to stay in the hospital
+    "When looking for the hospital, had to stay in the hospital
                     for a day or more",
-                    "During hospitalization, was sedated, intubated and placed in
+    "During hospitalization, was sedated, intubated and placed in
      artificial respiration with ventilator",
-                    "Do you have a medical health plan, whether private,
+    "Do you have a medical health plan, whether private,
                     company or public agency",
-                    "In the last week, for at least an hour, did you work in
+    "In the last week, for at least an hour, did you work in
                     any occupational activity?",
-                    "Last week, were you temporarily away from work?",
-                    "What is the main reason for this temporary removal?",
-                    "Continued to be paid (even partially) for this work",
-                    "How long have you been away from that job?",
-                    "Time away (From 1 month to less than 1 year)",
-                    "Time away (from 1 Year to less than 2 Years)",
-                    "Time away (from 2 Year to 98 Years)",
-                    "Has more than one job",
-                    "At work (single or main) I had that week, it was:",
-                    "This work was in the area:",
-                    "Do you have a formal contract and are you a public servant?",
-                    "What kind of job, role or function do you do in your job
+    "Last week, were you temporarily away from work?",
+    "What is the main reason for this temporary removal?",
+    "Continued to be paid (even partially) for this work",
+    "How long have you been away from that job?",
+    "Time away (From 1 month to less than 1 year)",
+    "Time away (from 1 Year to less than 2 Years)",
+    "Time away (from 2 Year to 98 Years)",
+    "Has more than one job",
+    "At work (single or main) I had that week, it was:",
+    "This work was in the area:",
+    "Do you have a formal contract and are you a public servant?",
+    "What kind of job, role or function do you do in your job
                     (single or main)? ",
-                    "What is the main activity of local or company in which you
+    "What is the main activity of local or company in which you
                     work?",
-                    "In the last week, how many employees worked in that firm/company
+    "In the last week, how many employees worked in that firm/company
                     that ... you had?",
-                    "1 to 5 employees",
-                    "6 to 10 employees",
-                    "How many hours a week did you normally work?",
-                    "How many hours, in the last week, did you actually work?",
-                    "How much did he receive (or withdraw) normally in all
+    "1 to 5 employees",
+    "6 to 10 employees",
+    "How many hours a week did you normally work?",
+    "How many hours, in the last week, did you actually work?",
+    "How much did he receive (or withdraw) normally in all
                     your jobs",
-                    "Received/withdrawn normally in cash",
-                    "Cash/withdrawal band number",
-                    "Cash value",
-                    "Usually received on products and merchandise",
-                    "Income/withdrawal range number on products and goods",
-                    "Value in products and goods",
-                    "Normally received only in benefits",
-                    "Was unpaid",
-                    "How much did you normally receive (or withdraw)
+    "Received/withdrawn normally in cash",
+    "Cash/withdrawal band number",
+    "Cash value",
+    "Usually received on products and merchandise",
+    "Income/withdrawal range number on products and goods",
+    "Value in products and goods",
+    "Normally received only in benefits",
+    "Was unpaid",
+    "How much did you normally receive (or withdraw)
                     in all your jobs",
-                    "Received/withdrawn normally in cash",
-                    "Cash/withdrawal band number",
-                    "Cash value",
-                    "Usually received on products and merchandise",
-                    "Income/withdrawal range number on products and goods",
-                    "Value in products and goods",
-                    "Most of the time, in the last week, was this (single or
+    "Received/withdrawn normally in cash",
+    "Cash/withdrawal band number",
+    "Cash value",
+    "Usually received on products and merchandise",
+    "Income/withdrawal range number on products and goods",
+    "Value in products and goods",
+    "Most of the time, in the last week, was this (single or
                     main) job performed in the same place you usually work?",
-                    "In the last week, were you  in remote work (home office
+    "In the last week, were you  in remote work (home office
                     or telework)?",
-                    "Do you contribute to the INSS?",
-                    "In the last week ___ have you taken any effective steps
+    "Do you contribute to the INSS?",
+    "In the last week ___ have you taken any effective steps
                     to get a job?",
-                    "What is the main reason for not looking for work
+    "What is the main reason for not looking for work
                     in the last week?",
-                    "Did any other resident of this household work in a paid way
+    "Did any other resident of this household work in a paid way
                     in the last week?",
-                    "Income received from retirement and pension by all residents",
-                    "Sum of received values",
-                    "Income from alimony, donation or cash allowance of person
+    "Income received from retirement and pension by all residents",
+    "Sum of received values",
+    "Income from alimony, donation or cash allowance of person
                     who did not live at home",
-                    "Sum of received values",
-                    "Income from Bolsa Família program",
-                    "Sum of received values",
-                    "On the Month of ... (Reference month), ... received income
+    "Sum of received values",
+    "Income from Bolsa Família program",
+    "Sum of received values",
+    "On the Month of ... (Reference month), ... received income
                     from the assistance benefit of Continued Provision - BPC-LOAS?",
-                    "Sum of received values",
-                    "Emergency aid related to coronavirus",
-                    "Sum of received values",
-                    "Unemployment insurance",
-                    "Sum of received values",
-                    "Other income, with rent, lease, private pension, scholarship,
+    "Sum of received values",
+    "Emergency aid related to coronavirus",
+    "Sum of received values",
+    "Unemployment insurance",
+    "Sum of received values",
+    "Other income, with rent, lease, private pension, scholarship,
                     income from financial investments, etc.",
-                    "Sum of received values",
-                    "This address is:",
-                    "What was the monthly rent paid, or that should have been paid,
+    "Sum of received values",
+    "This address is:",
+    "What was the monthly rent paid, or that should have been paid,
                     in the reference month?",
-                    "Track number of paid rent",
-                    "Who answered the questionnaire?",
-                    "Order number of the resident who provided the information")
+    "Track number of paid rent",
+    "Who answered the questionnaire?",
+    "Order number of the resident who provided the information"
+  )
 )
 
 
 #####
 
 ### Escolhendo e adicionando labels de acordo com idioma escolhido
-lista <- ifelse(idioma == "pt_br", as.list(Descricoes$descricao_port),
-                as.list(Descricoes$descricao_eng))
-names(lista) <- as.list(Descricoes$Codigo_da_variavel)
+    if(idioma == "pt_br"){
+      legendas <- split(Descricoes$descricao_port, 1:nrow(Descricoes))
+      } else{
+        legendas <- split(Descricoes$descricao_eng, 1:nrow(Descricoes))
+}
+names(legendas) <- as.list(Descricoes$Codigo_da_variavel)
 
-dados <-  dados %>% map(~.x %>% set_variable_labels(.labels = lista))
+dados <-  dados %>% map(~.x %>% set_variable_labels(.labels = legendas))
 
 names(dados) <- paste0('pnad_covid_',datas)
 return(dados)
