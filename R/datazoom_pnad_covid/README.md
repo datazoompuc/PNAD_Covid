@@ -16,13 +16,13 @@ Uma vez instalado, carregue o pacote:
 ```
 library(datazoomPNADcovid)
 ```
-Para carregar os dados de maio de 2015:
+Para carregar os dados de maio de 2020 em português:
 
 ```
-x <- pnad_covid_microdados('./path', c(5,2020))
+x <- pnad_covid_microdados('./path', idioma = "pt_br", c(5,2020))
 ```
 Em que ```'./path'``` é o endereço da pasta em que os microdados estão localizados no computador. Se for necessário carregar dados para mais de uma data, basta escrever
-```pnad_covid_microdados('./path', c(data1), c(data2))```. Os arquivos para ambas as datas precisam estar na mesma pasta.
+```pnad_covid_microdados('./path', c(data1), c(data2))```. Os arquivos para ambas as datas precisam estar na mesma pasta. Se qualquer outro valor diferente de ```"pt_br``` for citado em ```idioma```, a função carregará os dados em inglês. Se o argumento fica em branco, carrega-se em português.
 
 Como resultado, ```x``` é uma lista de dataframes, um para cada data. Caso queira juntá-los em uma única base de dados, faça ```dplyr::bind_rows(x)```.
 
