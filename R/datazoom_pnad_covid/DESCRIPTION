@@ -14,7 +14,7 @@ Description: Extrai e constrói bases de dados da PNAD COVID19 em formato R (.RD
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1
 Imports:
     dplyr,
     labelled,
@@ -23,4 +23,3 @@ Imports:
     stringr
 URL: http://www.econ.puc-rio.br/datazoom
 BugReports: https://github.com/datazoompuc/PNAD_Covid/issues
-

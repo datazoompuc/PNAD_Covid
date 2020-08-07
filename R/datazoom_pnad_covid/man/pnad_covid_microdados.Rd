@@ -5,10 +5,13 @@
 \alias{pnad_covid_microdados}
 \title{Carregando microdados da PNAD COVID19}
 \usage{
-pnad_covid_microdados(diretorio_dados, ...)
+pnad_covid_microdados(diretorio_dados, idioma = "pt_br", ...)
 }
 \arguments{
 \item{diretorio_dados}{Diretório onde os microdados originais em formato de texto estão armazenados}
+
+\item{idioma}{Idioma utilizado para descrever as variáveis. Default, \code{idioma = "pt_br"} é em
+português do Brasil. A alternativa é em inglês.}
 
 \item{...}{vetores com datas das pesquisas de interesse no  formato \code{c('mês', 'ano')}}
 }
