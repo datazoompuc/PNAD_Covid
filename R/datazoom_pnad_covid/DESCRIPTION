@@ -1,16 +1,15 @@
 Package: datazoomPNADcovid
-Title: Acesso aos microdados da PNAD COVID19 em formato .R
+Title: Compilation of PNAD Covid Microdata in .RData format
 Version: 1.0
 Authors@R: 
-    person(given = "Departamento de Economia",
+    person(given = "Department of Economics",
            family = "PUC-Rio",
            role = c("aut", "cre"),
            email = "datazoom@econ.puc-rio.br")
-Description: Extrai e constrói bases de dados da PNAD COVID19 em formato R (.RData) a partir
-    dos microdados originais, os quais  não são disponibilizados pelo Portal do IBGE 
-    (para informações sobre como obter os arquivos originais de dados, 
-    consulte o site do IBGE (www.ibge.gov.br).
-    Como a pesquisa ainda é publicada pelo IBGE, este programa está em constante atualização.
+Description: Extracts and builds databases from the PNAD COVID19 survey in R  format (.RData) from
+   the original microdata (for information on how to get the original data files, check IBGE's website
+    - www.ibge.gov.br). Since the survey is still being published by IBGE, this package
+   is subject to frequent updates.
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)

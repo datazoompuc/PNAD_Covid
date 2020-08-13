@@ -11,44 +11,44 @@ NULL
 
 
 
-#' Carregando microdados da PNAD COVID19
+#' Loading and compilating PNAD COVID19 microdata
 #'
-#' Extrai e constrói bases de dados da PNAD COVID19 em formato R (.RData) a partir
-#' dos microdados originais, os quais  não são disponibilizados pelo Portal do IBGE
-#' (para informações sobre como obter os arquivos originais de dados,
-#' consulte o site do IBGE (www.ibge.gov.br).
-#' Como a pesquisa ainda é publicada pelo IBGE, este programa está em constante atualização.
-#'  A função gera uma base para cada mês. Se for o caso, utilize o
-#'  comando  \code{\link{bind_rows}} para empilhar as bases.
+#' Extracts and builds databases from the PNAD COVID19 survey in R format (.RData) from
+#' the original microdata - for information on how to get the original data files, check IBGE's website -
+#' www.ibge.gov.br .
+#' Since the survey is still being published by IBGE,
+#' this function is subject to frequent updates.
+#' The function generates a database per month of the survey. If it is the case, use
+#' the \code{\link{dplyr::bind_rows}} command to stack all data.
 #'
-#' @param diretorio_dados Diretório onde os microdados originais em formato de texto estão armazenados
+#' @param dir_data Directory in which original .txt are located
 #'
-#' @param idioma Idioma utilizado para descrever as variáveis. Default, \code{idioma = "pt_br"} é em
-#' português do Brasil. A alternativa é em inglês.
+#' @param lang In which language will the variables be labelled. Default, \code{lang = "eng"} is
+#' in English. For Brazilian Portuguese, set \code{lang = "pt_br"}.
 #'
-#' @param ... vetores com datas das pesquisas de interesse no  formato \code{c('mês', 'ano')}
+#' @param ... vectors with survey dates as in  \code{c('MM', 'YYYY')}
 #'
-#' @return Lista de dataframes, sendo cada entrada um mês/ano em \code{...}
+#' @return Dataframe list, with each entry corresponding to a date in \code{...}
 #' @encoding UTF-8
 #' @export
 #'
 #' @examples
-#' datazoom_pnadc('./Desktop', c(5, 2020))
+#' pnad_covid_microdata('./Desktop', c(5, 2020))
 #'
 
-pnad_covid_microdados <- function(diretorio_dados, idioma = "pt_br",
+pnad_covid_microdata <- function(dir_data, lang = "eng",
                        ...){
 
   datas <- list(...)
 
 # Mensagens de erro em caso de escolha errada de datas
 
-  if (any(map(datas, length) != 2)) {stop('Escolha o mesmo número de anos e meses', call. = FALSE)}
+  if (any(map(datas, length) != 2)) {stop('Pick the same number of months and years', call. = FALSE)}
   mes <- datas %>% map( ~ .x[[1]])
   ano <- datas %>% map( ~ .x[[2]])
 
-  if (sum(mes %in% 5:12 == F) > 0) {stop('A PNAD-COVID começa em maio de 2020', call. = FALSE)}
-  if (sum(ano != 2020) > 0) {stop('A PNAD-COVID considera o ano de 2020', call. = FALSE)}
+  if (sum(mes %in% 5:12 == F) > 0) {stop('PNAD-Covid starts in May of 2020', call. = FALSE)}
+  if (sum(ano != 2020) > 0) {stop('The survey considers data from 2020', call. = FALSE)}
 
 # Nome do arquivo muda de acordo com a data escolhida
 
