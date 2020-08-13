@@ -11,7 +11,6 @@ NULL
 
 
 
-
 #' Carregando microdados da PNAD COVID19
 #'
 #' Extrai e constrói bases de dados da PNAD COVID19 em formato R (.RData) a partir
