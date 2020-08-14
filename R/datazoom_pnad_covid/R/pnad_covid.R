@@ -18,7 +18,7 @@ NULL
 #' www.ibge.gov.br .
 #' Since the survey is still being published by IBGE,
 #' this function is subject to frequent updates.
-#' The function generates a database per month of the survey. If it is the case, use
+#' The function generates one database per month of the survey. If it is the case, use
 #' the \code{\link{dplyr::bind_rows}} command to stack all data.
 #'
 #' @param dir_data Directory in which original .txt are located
@@ -59,7 +59,7 @@ datas <- datas %>% map(~ ifelse(.x == '052020', '052020_20200701', .x))
 ### Gerando caminhos dos arquivos
 
 filepath_in <- datas %>% map(~ .x %>% paste0('PNAD_COVID_',., '.csv') %>%
-                               file.path(diretorio_dados, ., sep = '')
+                               file.path(dir_data, ., sep = '')
                              )
 ## Carregando arquivos
 

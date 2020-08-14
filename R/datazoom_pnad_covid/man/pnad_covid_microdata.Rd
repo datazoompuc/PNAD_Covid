@@ -24,7 +24,7 @@ the original microdata - for information on how to get the original data files, 
 www.ibge.gov.br .
 Since the survey is still being published by IBGE,
 this function is subject to frequent updates.
-The function generates a database per month of the survey. If it is the case, use
+The function generates one database per month of the survey. If it is the case, use
 the \code{\link{dplyr::bind_rows}} command to stack all data.
 }
 \examples{
