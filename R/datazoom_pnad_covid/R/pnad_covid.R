@@ -588,7 +588,7 @@ Descricoes <- data.frame(
 #####
 
 ### Escolhendo e adicionando labels de acordo com idioma escolhido
-    if(idioma == "pt_br"){
+    if(lang == "pt_br"){
       legendas <- split(Descricoes$descricao_port, 1:nrow(Descricoes))
       } else{
         legendas <- split(Descricoes$descricao_eng, 1:nrow(Descricoes))
