@@ -19,7 +19,7 @@ library(datazoomPNADcovid)
 Para carregar os dados de maio de 2020 em inglês:
 
 ```
-x <- pnad_covid_microdados('./path', idioma = "eng", c(5,2020))
+x <- pnad_covid_microdados('./path', lang = "eng", c(5,2020))
 ```
 Em que ```'./path'``` é o endereço da pasta em que os microdados estão localizados no computador. Se for necessário carregar dados para mais de uma data, basta escrever
 ```pnad_covid_microdados('./path', c(data1), c(data2))```. Os arquivos para ambas as datas precisam estar na mesma pasta. O idioma padrão é o inglês. Para carregar variáveis em inglês, use ```idioma = "pt_br```.
