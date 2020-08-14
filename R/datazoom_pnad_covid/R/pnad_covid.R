@@ -54,7 +54,6 @@ pnad_covid_microdata <- function(dir_data, lang = "eng",
 
 mes <- mes %>% map(~.x %>% str_pad(width = 2, pad = 0))
 datas <- map2(mes, ano, paste0)
-datas <- datas %>% map(~ ifelse(.x == '052020', '052020_20200701', .x))
 
 ### Gerando caminhos dos arquivos
 
