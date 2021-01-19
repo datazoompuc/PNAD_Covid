@@ -360,7 +360,7 @@ foreach month in `months'{
 }
 
 
-di _newline "This version of the datazoom_pnadcontinua package is compatible with the latest version of the PNAD Covid published on 06 July 2020"
+di _newline "This version of the datazoom_pnadcontinua package is compatible with the latest version of the PNAD Covid published on 23 December 2020"
 di _newline "The datasets were saved in `c(pwd)'"
 end
 		

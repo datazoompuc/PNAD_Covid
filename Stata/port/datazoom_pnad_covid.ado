@@ -359,7 +359,7 @@ foreach month in `months'{
 }
 
 
-di _newline "Esta versão do pacote datazoom_pnad_covid é compatível com a última versão dos microdados da PNAD Covid divulgados em 24/06/2020"
+di _newline "Esta versão do pacote datazoom_pnad_covid é compatível com a última versão dos microdados da PNAD Covid divulgados em 23/12/2020"
 di _newline "As bases de dados foram salvas em `c(pwd)'"
 end
 		
