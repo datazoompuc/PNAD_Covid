@@ -33,9 +33,20 @@ loc caminhoprin = c(pwd)
 
 * separar o ado em duas partes
 foreach month in `months'{
+
+	if `month' < 10 {
 	di as input "Extracting file PNAD_COVID_0`month'2020  ..."
 	*cap infile using "`dic'", using("`original'/PNAD_COVID_`month'.csv") clear	
-	import delimited using "`original'/PNAD_COVID_0`month'2020.csv", clear	
+	import delimited using "`original'/PNAD_COVID_0`month'2020.csv", clear
+	}
+
+	if `month' >= 10 {
+	di as input "Extracting arquivo PNAD_COVID_`month'2020  ..."
+	*cap infile using "`dic'", using("`original'/PNAD_COVID_`month'.csv") clear	
+	import delimited using "`original'/PNAD_COVID_`month'2020.csv", clear
+	}
+
+
 	if _rc == 0 {
 	// normal labels
 	cap label var Ano		 "Year"
@@ -335,7 +346,15 @@ foreach month in `months'{
 	cap label var f002a5		"In your home there are the following basic cleaning and protection items: bleach or disinfectant	"
 	cap label var f0061	 "Who answered the questionnaire?"
 	cap label var f006	 "Order number of the resident who provided the label var"
+
+	if `month' < 10 {
 	save PNAD_COVID_0`month'2020, replace
+	}
+
+	if `month' >= 10 {
+	save PNAD_COVID_`month'2020, replace
+	}
+
 	}
 	else continue, break
 }
