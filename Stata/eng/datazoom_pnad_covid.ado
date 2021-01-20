@@ -41,11 +41,10 @@ foreach month in `months'{
 	}
 
 	if `month' >= 10 {
-	di as input "Extracting arquivo PNAD_COVID_`month'2020  ..."
+	di as input "Extracting file PNAD_COVID_`month'2020  ..."
 	*cap infile using "`dic'", using("`original'/PNAD_COVID_`month'.csv") clear	
 	import delimited using "`original'/PNAD_COVID_`month'2020.csv", clear
 	}
-
 
 	if _rc == 0 {
 	// normal labels
